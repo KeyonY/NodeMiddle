@@ -1,0 +1,29 @@
+doctype html
+html
+    head
+        meta(charset="UTF-8")
+        title #{title}
+        meta(name="keywords" content=keywords)
+        meta(name="description" content=description)
+        meta(http-equiv="X-UA-Compatible" content="IE=edge,chrome=1")
+        meta(name="viewport" content="width=device-width, initial-scale=1, user-scalable=no")
+        meta(name="renderer" content="webkit")
+        link(rel="shortcut icon" href="http://www.xilan.me/favicon.ico" type="image/x-icon")
+        link(rel='stylesheet' href='/assets/bootstrap-3.3.7-dist/css/bootstrap.min.css')
+        //-link(rel='stylesheet' href='https://cdn.bootcss.com/bootstrap/4.0.0/css/bootstrap.min.css')
+        link(rel='stylesheet' href='/assets/css/swiper-4.1.0.min.css')
+        link(rel='stylesheet' href='/Contents/base.css')
+        block links
+        script(type='text/javascript', src='/assets/jquery-1.10.2.min.js')
+        script(type='text/javascript', src='/assets/bootstrap-3.3.7-dist/js/bootstrap.min.js')
+        script(type='text/javascript', src='/assets/js/swiper-4.1.0.min.js')
+        script(type='text/javascript', src='/Scripts/base.js')
+    body
+        include header
+
+        block content
+
+        include footer
+
+        block scripts
+        block javascript

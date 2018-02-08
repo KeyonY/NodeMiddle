@@ -1,0 +1,14 @@
+body{background-color: #55585A;}
+
+.swiper-container{height: 400px;}
+.swiper-slide{
+  background-color: #373a3c; vertical-align: middle; text-align: right;
+  img{height: 100%;}
+  .title{position: absolute; top: 25%; left: 80px; z-index: 10; height: 40px; line-height: 40px; font-size: 24px; font-weight: bold; color: #fff;}
+  .text{position: absolute; top: 35%; left: 80px; z-index: 10; width: 300px; height: 40px; line-height: 20px; font-size: 14px; color: #fff; text-align: left;}
+}
+
+.htitle{margin: 80px 0 20px; color: #fff; font-size: 20px;}
+
+.thumbnail > a{display: block; height: 210px; overflow: hidden;}
+.thumbnail a>img, .thumbnail>img{width: 100%;}

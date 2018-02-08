@@ -1,0 +1,21 @@
+html,body{ height: 100%; }
+*{box-sizing: border-box;}
+body, dl, dd, h1, h2, h3, h4, h5, h6, p, form,input{ margin:0; }   ol,li,ul{ margin:0; padding:0; }
+body, button, input, select, textarea { font: 12px/1.5 "Microsoft YaHei",\9ed1\4f53,\5b8b\4f53, "Microsoft JhengHei", STHeiti, MingLiu; }
+h1, h2, h3, h4, h5, h6 { font-size: 100% }
+li{ list-style:none; }
+address, cite, dfn, em, var { font-style: normal }
+a { text-decoration: none !important; outline: none ;font-family:"Microsoft YaHei",\9ed1\4f53,\5b8b\4f53, "Microsoft JhengHei", STHeiti, MingLiu;cursor: pointer;}
+img { border: 0 }
+button, input, select, textarea { font-size: 100% ;font-family:"Microsoft YaHei", \9ed1\4f53,\5b8b\4f53, "Microsoft JhengHei", STHeiti, MingLiu;outline: none;}
+table { border-collapse: collapse; border-spacing: 0 }
+s{ text-decoration: none; }
+.clear:after{ display:block; content:''; clear:both; visibility:hidden; height:0; }
+.clear{ zoom:1; }
+
+/* nav 导航 */
+.navbar-fixed-top{border-width: 0;}
+.bg-inverse{color: #eceeef; background-color: #373a3c;}
+.navbar-default .navbar-nav>.active>a{background-color: transparent; color: #fff; &:hover{background-color: transparent; color: #fff;}}
+.navbar-default .navbar-nav>li>a{background-color: transparent; color: #777; &:hover{background-color: transparent; color: #fff;}}
+.nav-link{color: #eceeef; font-size: 16px;}

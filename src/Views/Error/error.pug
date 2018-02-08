@@ -1,0 +1,16 @@
+extends ../Shared/layout
+
+block links
+block scripts
+
+block content
+    .contain-fluid
+        .contain_box
+            h2 出错啦！~
+            div 错误原因：
+                strong #{message}
+            div 状态码：
+                b #{status}
+            hr
+            div
+                a(href="/") 返回首页

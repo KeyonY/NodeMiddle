@@ -1,0 +1,5 @@
+import "./index.scss"
+
+$(function(){
+
+});

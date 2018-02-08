@@ -1,0 +1,122 @@
+extends ../Shared/layout
+
+block links
+    style.
+        .main {
+            position: relative;
+            box-sizing: border-box;
+            height: 490px;
+            margin: 26px auto 60px;
+            border-radius: 4px;
+            background-color: #fff;
+        }
+        .err_500 {
+            padding-top: 110px;
+        }
+        .err_500 .bgi {
+            width: 300px;
+            height: 300px;
+            margin-left: 120px;
+            background: url(/assets/images/err-spirits.png) no-repeat 0 -690px;
+        }
+        .err_500 .content {
+            position: absolute;
+            left: 476px;
+            top: 130px;
+        }
+        .main .content > h3 {
+            font-size: 26px;
+            color: #474747;
+            margin-bottom: 20px;
+        }
+        .err_500 .content > h3 > span {
+            font-size: 20px;
+        }
+        .main .content .res {
+            line-height: 36px;
+            color: #888;
+        }
+        .main .content p {
+            margin-left: 70px;
+        }
+        .main .content .links {
+            margin-top: 28px;
+            margin-left: 68px;
+        }
+        .main .links > a {
+            display: inline-block;
+            width: 92px;
+            height: 32px;
+            line-height: 32px;
+            text-align: center;
+        }
+
+        .main .links .btn-link {
+            margin-right: 12px;
+            color: #fff;
+            background-color: #e62129;
+            border-radius: 2px;
+        }
+
+        .main .links .link {
+            text-decoration: underline;
+            color: #1163E4;
+        }
+        .err_not500 .bgi {
+            width: 780px;
+            height: 400px;
+            background: url(/assets/images/err-spirits.png) no-repeat 50px 10px;
+        }
+        .err_not500 .content {
+            position: absolute;
+            left: 452px;
+            top: 190px;
+        }
+block scripts
+    script.
+
+block content
+    .contain_fluid
+        .contain_box
+            .main
+                //-if status == 400
+                    .err_500
+                        .content
+                            h3 Bad Request.
+                            div.res.clear
+                                h4 错误代码：#{status}
+                            div.links
+                                a(href="/").btn-link 返回首页
+                if status == 500
+                    .err_500
+                        .bgi
+                        .content
+                            h3 啊哦！很抱歉，
+                                span 服务器出现了一些小状况，正在修复中...
+                            div.res.clear
+                                h4 错误代码：#{status}
+                                span.fl 您还可以：
+                                p 1.重新刷新页面
+                                p 2.联系技术小哥：0371-86068866
+                            div.links
+                                a(href="/").btn-link 返回首页
+                                a(href="javascript:window.location.reload();").link 刷新>>
+                else if status == 400 || status == 404 || status == 504 || status == 501 || 616
+                    .err_not500
+                        .bgi
+                        div.content
+                            h3 啊呜，该页面已不知飘向何处了...
+                            div.clear.res
+                                span.fl 失败原因：
+                                p 1.可能输错了地址
+                                p 2.该网页可能已删除或移动
+                            div.links
+                                a(href="/").btn-link 跳转到首页
+                                a(href="#").link 联系客服>>
+                else if (status == 405)
+                    .err_not500
+                        div.content
+                            h3 当前设计网登录账号无法登录交易平台，需要手机认证
+                            div.links
+                                a(href="/").btn-link 跳转到首页
+                                a(href="/Home/Varification#tab3").link 进行手机认证
