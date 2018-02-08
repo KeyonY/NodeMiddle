@@ -1,5 +1,5 @@
 # NodeMiddle
-node中间层项目demo，后端使用easy mock模拟的。
+node中间层项目，后端使用easy mock模拟的。
 
 ### 技术栈
 
