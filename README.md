@@ -31,5 +31,6 @@ node中间层项目demo，
   
   
 编译+启动生产环境
-> npm run build
+> npm run build  
+
 > npm start
