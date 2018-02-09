@@ -1,6 +1,7 @@
 ### 2018.2.9更新
 * 加上了排行榜页面和路由；
 * 增加页面footer
+* 修改网站title的板式
 
 # NodeMiddle
 node中间层项目，后端使用easy mock模拟的。
