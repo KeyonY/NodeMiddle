@@ -18,10 +18,10 @@ module.exports = {
   isDebug: process.env.NODE_ENV === 'dev',
   // title
   title: function (title) {
-	  return title + 'Keyon Y'
+	  return title + '-Keyon Y'
   },
   // keywords
-  keywords: 'Keyon Y-前端工程师',
+  keywords: 'Keyon Y-前端工程师-xilan.me',
   // description
   description: '专注于HTML5，JavaScript，NodeJS等前端技术，关注前沿技术',
   // set axios.interceptors for request Headers
