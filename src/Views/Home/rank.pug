@@ -1,0 +1,23 @@
+extends ../Shared/layout
+
+block links
+    link(rel='stylesheet' href='/Contents/rank.css')
+block scripts
+    script(type='text/javascript', src='/Scripts/rank.js')
+
+block content
+    .container
+        h3.htitle.row
+            span.col-md-2 Top10
+        .row
+            each item, index in top10
+                .col-sm-6.col-md-4(class={"col-md-offset-4": index == 9})
+                    .thumbnail
+                        a(href="")
+                            img.img-responsive(src=item.cover)
+                        .caption
+                            a.title(href="")= item.name
+                            div= item.describe
+                            a() Learn More>
+
+

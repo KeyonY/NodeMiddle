@@ -1,11 +1,10 @@
 var express = require('express');
 var router = express.Router();
 var addUser = require('../../middleware/addUser');
-var axios = require('axios');
+var axios = require('../naxios');
 var config = require('../config');
 var common = require('../common');
 var localOptions = require('../../build/localOptions');
-axios.defaults.baseURL = 'https://www.easy-mock.com/mock/5a791f0df6b5690e010750a3/api';
 
 // 首页
 router.get('/', addUser, (req, res, next) => {
@@ -20,7 +19,7 @@ router.get('/', addUser, (req, res, next) => {
 				title: config.title('首页'),
 				keywords: config.keywords,
 				description: config.description,
-				identity: 0,
+				menuNav: 0,
 				carList: res1.data.Data,
 				top10: res2.data.Data.slice((page-1)*3,page*3)
 			});

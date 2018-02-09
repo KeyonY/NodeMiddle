@@ -7,7 +7,7 @@ router.use('/', require('./default'));                      // 首页
 
 router.use('/Car:id', require('./carIndex'));                  // 介绍主页
 
-// router.use('/Home', require('./myHome'));                   // 我的个人中心
+router.use('/Rank', require('./rank'));                     // 排行榜
 
 router.use('/Api', require('./interface'));                 // 前端接口
 

@@ -6,19 +6,18 @@ var config = require('../config');
 var common = require('../common');
 
 
-// 汽车详情
+// 排行榜
 router.get('/', addUser, (req, res, next) => {
-	var targetId = req.originalUrl.match(/\/Car(.*?)$/i)[1];
 	axios.all([
-		axios.get('/Api/Car/Top10', {params:{}}),
+		axios.get('/Api/Cars/Top10', {params:{}}),
 	])
 		.then(axios.spread(function (res1){
 			config.throwError(next, res1);
-			res.render('Home/carIndex', {
+			res.render('Home/rank', {
 				title: config.title('Top10排行'),
 				keywords: config.keywords,
-				menuNav: 1,
-				carList: res1.data.Data,
+				menuNav: 2,
+				top10: res1.data.Data,
 			});
 		})).catch(e => {
 		config.renderError(req, res, e);

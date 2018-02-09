@@ -5,6 +5,7 @@ var entryJson = {
 	base: './src/Components/base/base.js',
 	index: './src/Components/index/index.js',   // 首页--Default 路由
 	home: './src/Components/home/home.js',
+	rank: './src/Components/rank/rank.js',
 }
 
 if(isDev) {

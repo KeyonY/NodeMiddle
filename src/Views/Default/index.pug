@@ -19,7 +19,9 @@ block content
             .swiper-pagination.swiper-pagination-white.swiper-pagination-clickable.swiper-pagination-bullets
 
     .container
-        h3.htitle Top10
+        h3.htitle.row
+            span.col-md-2 Top10
+            a.col-md-1.col-md-offset-9(href="") More>>
         .row
             each item in top10
                 .col-sm-6.col-md-4
@@ -27,8 +29,24 @@ block content
                         a(href="")
                             img.img-responsive(src=item.cover)
                         .caption
-                            h5= item.name
-                            p= item.describe
+                            a.title(href="")= item.name
+                            div= item.describe
+                            a() Learn More>
+
+    .container
+        h3.htitle.row
+            span.col-md-2 热门车型
+            a.col-md-1.col-md-offset-9(href="") More>>
+        .row
+            each item in top10
+                .col-sm-6.col-md-4
+                    .thumbnail
+                        a(href="")
+                            img.img-responsive(src=item.cover)
+                        .caption
+                            a.title(href="")= item.name
+                            div= item.describe
+                            a() Learn More>
 
 block javascript
     script.

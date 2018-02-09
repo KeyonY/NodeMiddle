@@ -1,0 +1,4 @@
+import './rank.scss';
+$(function () {
+	
+})

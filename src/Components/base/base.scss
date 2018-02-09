@@ -5,7 +5,7 @@ body, button, input, select, textarea { font: 12px/1.5 "Microsoft YaHei",\9ed1\4
 h1, h2, h3, h4, h5, h6 { font-size: 100% }
 li{ list-style:none; }
 address, cite, dfn, em, var { font-style: normal }
-a { text-decoration: none !important; outline: none ;font-family:"Microsoft YaHei",\9ed1\4f53,\5b8b\4f53, "Microsoft JhengHei", STHeiti, MingLiu;cursor: pointer;}
+a { text-decoration: none; outline: none ;font-family:"Microsoft YaHei",\9ed1\4f53,\5b8b\4f53, "Microsoft JhengHei", STHeiti, MingLiu;cursor: pointer;}
 img { border: 0 }
 button, input, select, textarea { font-size: 100% ;font-family:"Microsoft YaHei", \9ed1\4f53,\5b8b\4f53, "Microsoft JhengHei", STHeiti, MingLiu;outline: none;}
 table { border-collapse: collapse; border-spacing: 0 }
@@ -16,6 +16,42 @@ s{ text-decoration: none; }
 /* nav 导航 */
 .navbar-fixed-top{border-width: 0;}
 .bg-inverse{color: #eceeef; background-color: #373a3c;}
-.navbar-default .navbar-nav>.active>a{background-color: transparent; color: #fff; &:hover{background-color: transparent; color: #fff;}}
-.navbar-default .navbar-nav>li>a{background-color: transparent; color: #777; &:hover{background-color: transparent; color: #fff;}}
+.navbar-default .navbar-nav>.active>a{
+  background-color: transparent; color: #fff;
+  &:hover, &:active{background-color: transparent; color: #fff;}
+}
+.navbar-default .navbar-nav>li>a{
+  background-color: transparent; color: #777;
+  &:hover{background-color: transparent; color: #fff;}
+  &:active{background-color: transparent; color: #777;}
+}
 .nav-link{color: #eceeef; font-size: 16px;}
+
+/* footer */
+.footer{height: 100px; line-height: 30px; padding-top: 30px; background-color: #373a3c;}
+.footerNote{color: #fff; a{color: #fff; text-decoration: underline;}}
+/* footer END */
+
+/* Top10板块 */
+body{background-color: #55585A;}
+
+.swiper-container{height: 400px;}
+.swiper-slide{
+  background-color: #373a3c; vertical-align: middle; text-align: right;
+  img{height: 100%;}
+  .title{position: absolute; top: 25%; left: 80px; z-index: 10; height: 40px; line-height: 40px; font-size: 24px; font-weight: bold; color: #fff;}
+  .text{position: absolute; top: 35%; left: 80px; z-index: 10; width: 300px; height: 40px; line-height: 20px; font-size: 14px; color: #fff; text-align: left;}
+}
+
+.htitle{margin: 80px 0 20px; color: #fff; font-size: 20px;}
+
+.thumbnail{padding: 0; border-radius: 0; border-width: 0;}
+.thumbnail > a{display: block; height: 210px; overflow: hidden;}
+.thumbnail a>img, .thumbnail>img{width: 100%;}
+.caption{
+  height: 100px;
+  a{font-size: 12px;}
+  .title{display: block; margin-bottom: 5px; font-size: 18px;}
+  div{height: 34px; overflow:hidden; display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2;}
+}
+/* Top10板块 END */
