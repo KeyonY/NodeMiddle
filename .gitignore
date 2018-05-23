@@ -1,3 +1,4 @@
+/.idea
 /node_modules
 /build/localOptions.js
 /build/webpack.dll.config.js

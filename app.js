@@ -49,22 +49,22 @@ if (isDev) {
 	// reload(server, app);
 	reload(app);
 	server.listen(port, () => {
-		console.log('App【dev】 is now running on port ' + port + '!');
+		console.log('App【dev】 is now running on port ' + 'http://127.0.0.1:' + port + '!');
 	});
 
 	// 静态目录设置必须有，开发环境读取的vendor.js不是内存文件;
-    // 静态目录设置必须放在reload后面，避免页面引入reload.js报错
-    app.use(express.static(path.join(config.root, 'src')));
-    app.use('/', require(path.join(config.configRoot,'/routes')));
+  // 静态目录设置必须放在reload后面，避免页面引入reload.js报错
+  app.use(express.static(path.join(config.root, 'src')));
+  app.use('/', require(path.join(config.configRoot,'/routes')));
 	
 }else {
 	// 线上环境不需要监听，只需开启node服务即可
 	// 设置node的静态文件目录
 	app.use(express.static(path.join(config.root, 'dist')));
-    app.use('/',require(path.join(config.configRoot,'/routes')));
-    app.listen(port, () => {
-		console.log('App【production】 is now running on port ' + port + '!');
-    })
+  app.use('/',require(path.join(config.configRoot,'/routes')));
+  app.listen(port, () => {
+		console.log('App【production】 is now running on port ' + 'http://127.0.0.1:' + port + '!');
+  })
 }
 
 // 捕捉 404错误 传给 error路由

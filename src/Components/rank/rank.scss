@@ -1,0 +1,5 @@
+.rankList{
+  height: 120px; margin-bottom: 20px; background-color: #fff; overflow: hidden;
+  & > a{padding-left: 0;}
+  & > div{padding-top: 10px;}
+}

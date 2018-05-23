@@ -9,15 +9,14 @@ block content
     .container
         h3.htitle.row
             span.col-md-2 Top10
-        .row
-            each item, index in top10
-                .col-sm-6.col-md-4(class={"col-md-offset-4": index == 9})
-                    .thumbnail
-                        a(href="")
-                            img.img-responsive(src=item.cover)
-                        .caption
-                            a.title(href="")= item.name
-                            div= item.describe
-                            a() Learn More>
+        each item, index in top10
+            .row.rankList
+                a.col-sm-4.col-md-3(href="")
+                    img.rounded.float-left(src=item.cover)
+                .col-sm-8.col-md-9
+                    .caption
+                        a.title(href="")= item.name
+                        div= item.describe
+                        a() Learn More>
 
 
