@@ -1,11 +1,13 @@
 .container-fluid
-    //-.navbar-fixed-top
-    nav.navbar.navbar-default.bg-inverse.navbar-dark.navbar-fixed-top
-        .container
-            ul.nav.navbar-nav
-                li(class={"active": menuNav == 0})
-                    a.nav-link(href="/") 首页
-                li(class={"active": menuNav == 1})
-                    a.nav-link(href="") 热门车型
-                li(class={"active": menuNav == 2})
-                    a.nav-link(href="/Rank") 排行榜
+	//-.navbar-fixed-top
+	nav.navbar.navbar-default.bg-inverse.navbar-dark.navbar-fixed-top
+		.container
+			ul.nav.navbar-nav
+				li(class={"active": menuNav == 0})
+					a.nav-link(href="/") 首页
+				li(class={"active": menuNav == 1})
+					a.nav-link(href="") 热门车型
+				li(class={"active": menuNav == 2})
+					a.nav-link(href="/Rank") 排行榜
+			.navRight
+				a.nav-link(href="/Docs") 文档

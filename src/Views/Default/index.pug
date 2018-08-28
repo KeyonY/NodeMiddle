@@ -1,63 +1,63 @@
 extends ../Shared/layout
 
 block links
-    link(rel='stylesheet' href='/Contents/index.css')
+	link(rel='stylesheet' href='/Contents/index.css')
 block scripts
-    script(type='text/javascript', src='/Scripts/index.js')
+	script(type='text/javascript', src='/Scripts/index.js')
 
 block content
-    .container(style="margin-top: 70px;")
-        .swiper-container.swiper-container-fade.swiper-container-horizontal.swiper-container-wp8-horizontal
-            .swiper-wrapper
-                each item in carList
-                    .swiper-slide
-                        img.bgImg(src=item.cover)
-                        .title= item.name
-                        .subtitle
-                        .text
-                            p= item.describe
-            .swiper-pagination.swiper-pagination-white.swiper-pagination-clickable.swiper-pagination-bullets
+	.container(style="margin-top: 70px;")
+		.swiper-container.swiper-container-fade.swiper-container-horizontal.swiper-container-wp8-horizontal
+			.swiper-wrapper
+				each item in carList
+					.swiper-slide
+						img.bgImg(src=item.cover)
+						.title= item.name
+						.subtitle
+						.text
+							p= item.describe
+			.swiper-pagination.swiper-pagination-white.swiper-pagination-clickable.swiper-pagination-bullets
 
-    .container
-        h3.htitle.row
-            span.col-md-2 Top10
-            a.col-md-1.col-md-offset-9(href="") More>>
-        .row
-            each item in top10
-                .col-sm-6.col-md-4
-                    .thumbnail
-                        a(href="")
-                            img.img-responsive(src=item.cover)
-                        .caption
-                            a.title(href="")= item.name
-                            div= item.describe
-                            a() Learn More>
+	.container
+		h3.htitle.row
+			span.col-md-2 Top10
+			a.col-md-1.col-md-offset-9(href="") More>>
+		.row
+			each item in top10
+				.col-sm-6.col-md-4
+					.thumbnail
+						a(href="")
+							img.img-responsive(src=item.cover)
+						.caption
+							a.title(href="")= item.name
+							div= item.describe
+							a() Learn More>
 
-    .container
-        h3.htitle.row
-            span.col-md-2 热门车型
-            a.col-md-1.col-md-offset-9(href="") More>>
-        .row
-            each item in top10
-                .col-sm-6.col-md-4
-                    .thumbnail
-                        a(href="")
-                            img.img-responsive(src=item.cover)
-                        .caption
-                            a.title(href="")= item.name
-                            div= item.describe
-                            a() Learn More>
+	.container
+		h3.htitle.row
+			span.col-md-2 热门车型
+			a.col-md-1.col-md-offset-9(href="") More>>
+		.row
+			each item in top10
+				.col-sm-6.col-md-4
+					.thumbnail
+						a(href="")
+							img.img-responsive(src=item.cover)
+						.caption
+							a.title(href="")= item.name
+							div= item.describe
+							a() Learn More>
 
 block javascript
-    script.
-        var swiper = new Swiper('.swiper-container', {
-            autoplay:true,
-            spaceBetween: 30,
-            effect: 'fade',
-            loop: true,
-            pagination: {
-                el: '.swiper-pagination',
-                clickable: true,
-            },
-        });
+	script.
+		var swiper = new Swiper('.swiper-container', {
+			autoplay: true,
+			spaceBetween: 30,
+			effect: 'fade',
+			loop: true,
+			pagination: {
+				el: '.swiper-pagination',
+				clickable: true,
+			},
+		});
 

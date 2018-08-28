@@ -1,22 +1,22 @@
 extends ../Shared/layout
 
 block links
-    link(rel='stylesheet' href='/Contents/rank.css')
+	link(rel='stylesheet' href='/Contents/rank.css')
 block scripts
-    script(type='text/javascript', src='/Scripts/rank.js')
+	script(type='text/javascript', src='/Scripts/rank.js')
 
 block content
-    .container
-        h3.htitle.row
-            span.col-md-2 Top10
-        each item, index in top10
-            .row.rankList
-                a.col-sm-4.col-md-3(href="")
-                    img.rounded.float-left(src=item.cover)
-                .col-sm-8.col-md-9
-                    .caption
-                        a.title(href="")= item.name
-                        div= item.describe
-                        a() Learn More>
+	.container
+		h3.htitle.row
+			span.col-md-2 Top10
+		each item, index in top10
+			.row.rankList
+				a.col-sm-4.col-md-3(href="")
+					img.rounded.float-left(src=item.cover)
+				.col-sm-8.col-md-9
+					.caption
+						a.title(href="")= item.name
+						div= item.describe
+						a() Learn More>
 
 
